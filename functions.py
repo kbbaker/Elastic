@@ -3,6 +3,7 @@ __author__ = 'Kevin'
 import random
 from math import *
 
+#some general geographic functions
 def bearing(lon1, lat1, lon2, lat2):
 
     #calculate the bearing of a two point vector
@@ -15,6 +16,7 @@ def bearing(lon1, lat1, lon2, lat2):
 
 
 def haversine(lon1, lat1, lon2, lat2):
+    #calculate the harversine length between two points
 
     # converting DD to rad
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
@@ -27,6 +29,7 @@ def haversine(lon1, lat1, lon2, lat2):
     return m
 
 def length(line):
+    #calculate the harversine length of a line along multiple points
 
     linelength = 0
 
@@ -52,8 +55,8 @@ def newCoordAlongLine(lon1,lat1, lon2, lat2, distance):
     return newlon*180/pi, newlat*180/pi
 
 def normalizeAngle(bear):
+        # Normalize the bearing angle to calculate parallelity
 
-        # Normalize the bearing angle to calculate parallelity (DDB)
         radians = bear
         #bearing in normalized radians
         #-----------------------------
@@ -89,16 +92,23 @@ def newCoordAtBearing(bear, midpoint, distance):
     return newlon*180/pi, newlat*180/pi
 
 class boxFetcher:
+    #random bounding box generation class
+
     def __init__(self,minX,minY,maxX,maxY):
         self.minX = minX
         self.minY = minY
         self.maxX = maxX
         self.maxY = maxY
+
     def randomCoordInBBox(self):
+        #create random coordinate in bounding box
+
         y = self.minY + random.random() * (self.maxY - self.minY)
         x = self.minX + random.random() * (self.maxX - self.minX)
         return x,y
     def randomBBox(self, w, h):
+        #create bounding box with specified w en h around random coordinate in bounding box
+
         coords = self.randomCoordInBBox()
 
         newMinx = newCoordAtBearing((3*pi)/2, coords, w/2)[0]
