@@ -36,8 +36,8 @@
       <file leaf-file-name="Grootste_opladers_adjusted.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Grootste_opladers_adjusted.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5858156" vertical-offset="2630" max-vertical-offset="3366">
-              <caret line="179" column="9" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.46524823" vertical-offset="2613" max-vertical-offset="3400">
+              <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
               <folding>
                 <element signature="e#57#71#0" expanded="true" />
               </folding>
@@ -414,7 +414,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1688" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-1688" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -821,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Grootste_opladers_adjusted.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5858156" vertical-offset="2630" max-vertical-offset="3366">
-          <caret line="179" column="9" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.46524823" vertical-offset="2613" max-vertical-offset="3400">
+          <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
           <folding>
             <element signature="e#57#71#0" expanded="true" />
           </folding>
