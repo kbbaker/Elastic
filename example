@@ -1,0 +1,45 @@
+ body = {
+        '_source' : ['id', 'input_format_id'],
+        'sort' : [
+            {
+                'id' : {'order' : 'asc'}
+                }
+            ],
+        'size' : limit,
+        'query' : {
+            'bool' : {
+                'should' : esFilterArray,
+                'minimum_should_match' : 1,
+                'filter' : [
+                    {
+                        'terms' : {
+                            'type_id' : ['2','8','9','25','26','10','11','12','13']
+                            }
+                        },                
+                    {
+                        'terms' : {
+                            'characteristic_ids' : ['42']
+                            }
+                        },
+                    {
+                        'range' : {
+                            'id' : {
+                                'gt' : maxId
+                                }
+                            }
+                        },
+                    {
+                        'range' : {
+                            'score' : {
+                                'gte' : 0.6
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    
+    result = es.search(
+        index = esCluster['index'],
+        body = body)
